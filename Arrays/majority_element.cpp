@@ -1,3 +1,8 @@
+// Problem: Majority element
+// Approach: Moore's Voting Algorithm
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+
 class Solution {
 public:
     int majorityElement(vector<int>& nums) {
