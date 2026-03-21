@@ -3,21 +3,22 @@
 // Time Complexity: O(n)
 // Space Complexity: O(1)
 
-#include <bits/stdc++.h>
-using namespace std;
-
-int main() {
-    vector<int> nums = {2,7,11,15};
-    int target = 9;
-
-    int l = 0, r = nums.size() - 1;
-
-    while(l < r) {
-        if(nums[l] + nums[r] == target) {
-            cout << l << " " << r;
-            break;
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        int n = nums.size();
+        unordered_map<int,int>m;
+        vector<int>ans;
+        for(int i = 0;i < n;i++){
+            int first = nums[i];
+            int second = target-first;
+            if(m.find(second)!=m.end()){
+                ans.push_back(i);
+                ans.push_back(m[second]);
+                break;
+            }
+            m[first] = i;
         }
-        else if(nums[l] + nums[r] < target) l++;
-        else r--;
+        return ans;
     }
-}
+};
