@@ -1,8 +1,3 @@
-// Problem: Two Sum (sorted array)
-// Approach: Two Pointer
-// Time Complexity: O(n)
-// Space Complexity: O(1)
-
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
